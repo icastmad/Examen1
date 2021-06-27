@@ -48,7 +48,7 @@ namespace WBL
         {
             try
             {
-                var result = sql.QueryFirstAsync<DepartamentosEntity>(sp: "DepartamentosObtener", Param: new { entity.IdDepartamento });
+                var result = sql.QueryFirstAsync<DepartamentosEntity>(sp: "DepartamentosObtener", Param: new { entity.Id_Departamento });
 
                 return await result;
             }
@@ -80,7 +80,7 @@ namespace WBL
         {
             try
             {
-                var result = sql.ExecuteAsync(sp: "DepartamentosActualizar", Param: new { entity.IdDepartamento, entity.Descripcion, entity.Ubicacion, entity.Estado });
+                var result = sql.ExecuteAsync(sp: "DepartamentosActualizar", Param: new { entity.Id_Departamento, entity.Descripcion, entity.Ubicacion, entity.Estado });
 
                 return await result;
             }
@@ -96,7 +96,7 @@ namespace WBL
         {
             try
             {
-                var result = sql.ExecuteAsync(sp: "DepartamentosEliminar", Param: new { entity.IdDepartamento });
+                var result = sql.ExecuteAsync(sp: "DepartamentosEliminar", Param: new { entity.Id_Departamento });
 
                 return await result;
             }

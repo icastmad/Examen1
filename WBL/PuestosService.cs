@@ -48,7 +48,7 @@ namespace WBL
         {
             try
             {
-                var result = sql.QueryFirstAsync<PuestosEntity>(sp: "PuestosObtener", Param: new { entity.IdPuesto });
+                var result = sql.QueryFirstAsync<PuestosEntity>(sp: "PuestosObtener", Param: new { entity.Id_Puesto });
 
                 return await result;
             }
@@ -80,7 +80,7 @@ namespace WBL
         {
             try
             {
-                var result = sql.ExecuteAsync(sp: "PuestosActualizar", Param: new { entity.IdPuesto, entity.Nombre, entity.Salario, entity.Estado });
+                var result = sql.ExecuteAsync(sp: "PuestosActualizar", Param: new { entity.Id_Puesto, entity.Nombre, entity.Salario, entity.Estado });
 
                 return await result;
             }
@@ -96,7 +96,7 @@ namespace WBL
         {
             try
             {
-                var result = sql.ExecuteAsync(sp: "PuestosEliminar", Param: new { entity.IdPuesto });
+                var result = sql.ExecuteAsync(sp: "PuestosEliminar", Param: new { entity.Id_Puesto });
 
                 return await result;
             }
