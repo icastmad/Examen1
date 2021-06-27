@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[PuestosEliminar]
-@IdPuesto INT
+@Id_Puesto INT
 
 AS
   BEGIN
@@ -10,7 +10,7 @@ AS
 	BEGIN TRY
 
 	DELETE FROM Puestos
-	WHERE Id_Puesto=@IdPuesto
+	WHERE Id_Puesto=@Id_Puesto
 
 	   COMMIT TRANSACTION TRASA
 

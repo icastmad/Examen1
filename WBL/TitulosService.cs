@@ -31,7 +31,7 @@ namespace WBL
         {
             try
             {
-                var result = sql.QueryAsync<TitulosEntity>(sp: "MarcaVehiculoObtener");
+                var result = sql.QueryAsync<TitulosEntity>(sp: "TitulosObtener");
 
                 return await result;
             }
@@ -96,7 +96,7 @@ namespace WBL
         {
             try
             {
-                var result = sql.ExecuteAsync(sp: "TitulosEliminar", Param: new { entity.Id_Titulo });
+                var result = sql.ExecuteAsync(sp: "TitulosEliminar", Param: new { entity.Id_Titulo});
 
                 return await result;
             }

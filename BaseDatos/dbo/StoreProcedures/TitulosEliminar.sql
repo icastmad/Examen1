@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[TitulosEliminar]
-@IdTitulo INT
+@Id_Titulo INT
 
 AS
   BEGIN
@@ -10,7 +10,7 @@ AS
 	BEGIN TRY
 
 	DELETE FROM Titulos
-	WHERE Id_Titulo=@IdTitulo
+	WHERE Id_Titulo=@Id_Titulo
 
 	   COMMIT TRANSACTION TRASA
 

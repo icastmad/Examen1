@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[DepartamentosActualizar]
-@IdDepartamento INT,
+@Id_Departamento INT,
 @Descripcion VARCHAR(250), 
 @Ubicacion VARCHAR(250),
 @Estado BIT
@@ -16,7 +16,7 @@ AS
 		Descripcion=@Descripcion,
 		Ubicacion=@Ubicacion,
 		Estado=@Estado
-		WHERE Id_Departamento=@IdDepartamento
+		WHERE Id_Departamento=@Id_Departamento
 
 	   COMMIT TRANSACTION TRASA
 

@@ -1,10 +1,10 @@
 ﻿CREATE PROCEDURE [dbo].[DepartamentosObtener]
-	@IdDepartamento INT =NULL
+	@Id_Departamento INT =NULL
 AS
 BEGIN
 SET NOCOUNT ON
 
 SELECT Id_Departamento,Descripcion, Ubicacion, Estado FROM Departamentos
-WHERE(@IdDepartamento IS NULL OR Id_Departamento=@IdDepartamento)
+WHERE(@Id_Departamento IS NULL OR Id_Departamento=@Id_Departamento)
 
 END

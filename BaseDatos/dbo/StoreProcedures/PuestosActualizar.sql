@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[PuestosActualizar]
-@IdPuesto INT,
+@Id_Puesto INT,
 @Nombre VARCHAR(250), 
 @Salario INT,
 @Estado BIT
@@ -16,7 +16,7 @@ AS
 		Nombre=@Nombre,
 		Salario=@Salario,
 		Estado=@Estado
-		WHERE Id_Puesto=@IdPuesto
+		WHERE Id_Puesto=@Id_Puesto
 
 	   COMMIT TRANSACTION TRASA
 

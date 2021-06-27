@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[DepartamentosEliminar]
-@IdDepartamento INT
+@Id_Departamento INT
 
 AS
   BEGIN
@@ -10,7 +10,7 @@ AS
 	BEGIN TRY
 
 	DELETE FROM Departamentos
-	WHERE Id_Departamento=@IdDepartamento
+	WHERE Id_Departamento=@Id_Departamento
 
 	   COMMIT TRANSACTION TRASA
 

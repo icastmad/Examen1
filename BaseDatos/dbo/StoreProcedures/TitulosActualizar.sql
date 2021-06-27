@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[TitulosActualizar]
-@IdTitulo INT,
+@Id_Titulo INT,
 @Descripcion VARCHAR(250), 
 @Estado BIT
 AS
@@ -14,7 +14,7 @@ AS
 		SET
 		Descripcion=@Descripcion,
 		Estado=@Estado
-		WHERE Id_Titulo=@IdTitulo
+		WHERE Id_Titulo=@Id_Titulo
 
 	   COMMIT TRANSACTION TRASA
 
